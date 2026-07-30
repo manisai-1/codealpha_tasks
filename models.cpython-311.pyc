@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.name }}</title>
+</head>
+<body>
+
+<h1>{{ product.name }}</h1>
+
+<p><strong>Description:</strong> {{ product.description }}</p>
+
+<p><strong>Price:</strong> ₹{{ product.price }}</p>
+
+<a href="{% url 'add_to_cart' product.id %}">
+    <button>Add to Cart</button>
+</a>
+
+<br><br>
+
+<a href="{% url 'home' %}">
+    <button>Back to Home</button>
+</a>
+
+</body>
+</html>
